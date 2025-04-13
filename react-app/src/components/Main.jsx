@@ -1,4 +1,4 @@
-import "./Main.css";
+import './Main.css';
 
 // JSX 주의 사항
 // 1. 중괄호 내부에는 자바스크립트 표현식만 넣을 수 있다. ex) if, for문 x
@@ -8,13 +8,18 @@ import "./Main.css";
 
 function Main() {
     const user = {
-        name: "kim",
+        name: 'kim',
         isLogin: true,
-    }
-    return <>
-        {user.isLogin ? <div className="logout">로그아웃</div> : <div>로그인</div>}
-    </>;
-    
+    };
+    return (
+        <>
+            {user.isLogin ? (
+                <div className="logout">로그아웃</div>
+            ) : (
+                <div>로그인</div>
+            )}
+        </>
+    );
 }
 
 export default Main;
